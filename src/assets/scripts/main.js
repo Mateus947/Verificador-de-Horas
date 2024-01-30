@@ -1,11 +1,12 @@
 function ver_hora(){
     var data = new Date()
     var hora = data.getHours()
+    var minutos = data.getMinutes()
     var txt = document.querySelector("#text")
     var img = document.querySelector("#img")
 
     if(hora >= 0 && hora < 12){
-        txt.innerHTML = `Agora são ${hora} horas, bom dia !`
+        txt.innerHTML = `Agora são ${hora}:${minutos}, bom dia !`
         img.src = '../src/assets/images/bomdia.png'
         document.body.style.background = '#ffef9f'
     }
